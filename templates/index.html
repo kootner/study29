@@ -17,10 +17,6 @@
             font-family: 'Cute Font', cursive;
         }
 
-        html, body {
-            height: 100%;
-        }
-
         .wrap {
             width: 800px;
             height: 100%;
@@ -50,6 +46,30 @@
             margin: 30px auto;
 
         }
+
+        .restaurant-box {
+            width: 600px;
+            margin-top: 30px;
+            margin-left: auto;
+
+
+        }
+        .sec {
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: block;
+            margin: auto;
+        }
+
+        .restaurant-input-box {
+            width: 400px;
+            margin: auto;
+            padding: 20px 20px 7px 20px;
+
+            border: 2px solid;
+            border-radius: 5px;
+        }
     </style>
 
     <script>
@@ -68,7 +88,7 @@
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="해야 할 일을 입력하세요" aria-label="Recipient's username"
                        aria-describedby="button-addon2">
-                <button class="btn btn-outline-primary" type="button" id="button-addon2">추가하기</button>
+                <button class="btn btn-outline-primary" type="button">추가하기</button>
             </div>
         </div>
 
@@ -87,6 +107,58 @@
                     식사 벨런스 맞추기
                 </li>
             </ul>
+        </div>
+        <div class="title">
+            <h1 style="font-size: 70px">나만의 맛집 리스트</h1>
+        </div>
+
+        <div class="restaurant-input-box">
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="매장명">
+            </div>
+            <div class="mb-3">
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="코맨트" rows="2"></textarea>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="대표 메뉴">
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="나만의 픽">
+            </div>
+            <select class="form-select sec" aria-label="Default select example">
+                <option selected>-- 나만의 별점 --</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="매장 위치 지도 URL">
+            </div>
+            <div class="btn">
+            <button class="btn btn-primary" type="submit">등록하기</button>
+            </div>
+        </div>
+
+
+    <div class="restaurant-box">
+            <div class="card" style="width: 25rem;">
+                <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20220412_105%2F16497698792150ynig_JPEG%2Fupload_51651f145ab7839f4e3b0c3df23179f6.jpeg"
+                     class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">신림황소곱창(매장명)</h5>
+                    <p class="card-text">자주가는 곳인데 갈때마다 너무 맛있습니다! 숙주,부추도 너무 좋고 곱많이 들어있는 곱창도 너무너무좋아요(코맨트)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">모둠구이(대표 메뉴)</li>
+                    <li class="list-group-item">깍두기볶음밥(나만의 픽)</li>
+                    <li class="list-group-item">⭐(별점)</li>
+                </ul>
+                <div class="card-body">
+                    <a href="http://naver.me/Gz51iCjB" class="card-link">매장 위치</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
