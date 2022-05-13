@@ -19,7 +19,16 @@ def add_todo():
         'done': 0
     }
     db.todolist.insert_one(doc)
-    return jsonify({'msg': 'POST 등록 완료'})
+    return jsonify({'msg': '할일 추가 완료'})
+
+
+@app.route('/todo/delete', methods=["POST"])
+def delete_todo():
+    delete_list = request.form.getlist('delete_send[]')
+    for del_todo in delete_list:
+        db.todolist.delete_one({'todo': del_todo})
+
+    return jsonify({'msg': '할일 삭제 완료'})
 
 
 @app.route('/todo', methods=["GET"])
